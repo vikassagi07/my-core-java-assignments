@@ -1,0 +1,47 @@
+spring:
+  jpa:
+     hibernate.ddl-auto: update
+  datasource:
+     url: jdbc:mysql://localhost:3306/booklib
+     username: root
+     password: Savis@709393
+  profiles:
+     active :
+       prod
+
+
+
+  server:
+    port: 9090
+  spring:
+    application:
+      name: javainuse
+  springdoc:
+    api-docs:
+      path: /api-docs
+    swagger-ui:
+      enabled: true
+      path: /swagger-ui.html
+---
+
+spring:
+
+  message: "welcome to the dev environment"
+server:
+  port: 8082
+
+---
+
+  spring:
+    message: "welcome to the test environment"
+  server:
+    port: 8083
+
+---
+spring:
+  message: "welcome to the prod environment"
+server:
+  port: 8084
+
+
+
